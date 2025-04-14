@@ -9,6 +9,8 @@ import com.anish.pojo.Vykladach;
 
 public class App 
 {
+	private static SessionFactory factory;
+	
     public static void main( String[] args )
     {
     	
@@ -33,5 +35,17 @@ public class App
     trans.commit();
     ses.close();
     
+    }
+    
+    public boolean removeVykladach(Vykladach vykladach) {
+        try (Session session = factory.openSession()) {
+            Transaction transaction = session.beginTransaction();
+            session.remove(vykladach);
+            transaction.commit();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

@@ -39,4 +39,12 @@ public class Vykladach {
 		this.location = location;
 	}
 	
+	@Override
+	public String toString() {
+	    return "Vykladach{" +
+	            "id=" + id +
+	            ", name='" + name + '\'' +
+	            ", location='" + location + '\'' +
+	            '}';
+	}
 }
