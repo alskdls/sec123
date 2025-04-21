@@ -10,7 +10,7 @@ import java.util.List;
 
 public class VykladachDao {
 
-	public Vykladach findById(int id) {
+    public Vykladach findById(int id) {
         return HibernateSessionFactoryUtil.getSessionFactory()
                 .openSession()
                 .get(Vykladach.class, id);

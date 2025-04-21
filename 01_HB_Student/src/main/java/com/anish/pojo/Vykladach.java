@@ -9,17 +9,17 @@ import jakarta.persistence.Table;
 
 @Table(name = "kafedra")
 public class Vykladach {
-	
+
 	@Id
 	@Column(name = "id")
 	private int id;
-	
+
 	@Column(name = "name")
 	private String name;
-	
+
 	@Column(name = "location")
 	private String location;
-	
+
 	public int getId() {
 		return id;
 	}
@@ -38,13 +38,13 @@ public class Vykladach {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	
+
 	@Override
 	public String toString() {
-	    return "Vykladach{" +
-	            "id=" + id +
-	            ", name='" + name + '\'' +
-	            ", location='" + location + '\'' +
-	            '}';
+		return "Vykladach{" +
+				"id=" + id +
+				", name='" + name + '\'' +
+				", location='" + location + '\'' +
+				'}';
 	}
 }
